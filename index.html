@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
     <meta name="description" content="صفحة تجريبية لأول مشروع صيدلي، تعرض معلومات عن الصيدلة والأدوية مع تصميم تفاعلي لتجربة المستخدم.">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
     <link rel="stylesheet" href="css-test3.css">
@@ -18,13 +18,19 @@
     <img id="logo" class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2RZYVJnY9ZRBLCeNwqCe1QMLG3EP8YKeNEw&s" width="150px" height="150px">
     <span class="dot2" id="dot2"></span>
    </div>
-    <div class="bar2">
+      <div class="openbar" onclick="toggleMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div id="bar2" class="bar2">
     <ul class="tap1">
+        <img id="logo2" class="logo2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2RZYVJnY9ZRBLCeNwqCe1QMLG3EP8YKeNEw&s" width="150px" height="150px">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li class="tap-li"><a href="#">Sections</a>
+        <li id="tap-li" class="tap-li" onclick="showtap2()"><a href="#">Sections</a>
             <i class="fi fi-sr-arrow-down" style="color:rgb(255, 0, 0);font-size: 15px;"></i>
-            <ul class="tap2">
+            <ul id="tap2" class="tap2">
                 <li><a href="#">chronic</a></li> 
                 <li><a href="#">sensitival</a></li>
                 <li><a href="#">chronic</a></li> 
@@ -33,9 +39,9 @@
                 <li><a href="#">sensitival</a></li>
             </ul>
         </li>
-        <li class="tap-li3"><a href="#">News</a>
+        <li id="tap-li3" class="tap-li3" onclick="showtap3()"><a href="#">News</a>
             <i class="fi fi-sr-arrow-down" style="color:rgb(255, 0, 0);font-size: 15px;"></i>
-            <ul class="tap3">
+            <ul id="tap3" class="tap3">
                 <li class="li3"><a href="#">chronic</a></li> 
                 <li class="li3"><a href="#">sensitival</a></li>
                 <li class="li3"><a href="#">chronic</a></li> 
@@ -182,7 +188,7 @@
          <ul class="icons-icon11">
          <li>
           <div class="icons-icon-content"  data-img="imghover1">
-           <div>
+           <div class="img-content">
             <img src="https://freerangestock.com/sample/120141/search-icon-vector.jpg" width="80px" height="80px" style="border-radius: 50px;margin-top: 50px;margin-right: 30px;">
            </div>
             <div>        
@@ -194,7 +200,7 @@
         </li>
         <li>
             <div class="icons-icon-content"  data-img="imghover2">
-             <div>
+             <div class="img-content">
               <img src="https://freerangestock.com/sample/120141/search-icon-vector.jpg" width="80px" height="80px" style="border-radius: 50px;margin-top: 50px;margin-right: 30px;">
              </div>
               <div>        
@@ -206,7 +212,7 @@
           </li>
           <li>
             <div class="icons-icon-content"  data-img="imghover3">
-             <div>
+             <div class="img-content">
               <img src="https://freerangestock.com/sample/120141/search-icon-vector.jpg" width="90px" height="90px" style="border-radius: 50px;margin-top: 50px;margin-right: 30px;">
              </div>
               <div>        
@@ -242,4 +248,3 @@
   </div>
 </body>
 </html>
-
