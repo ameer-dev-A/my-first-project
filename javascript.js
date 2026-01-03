@@ -1,582 +1,230 @@
-* {
-  box-sizing: border-box;
-}
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-}
-.openbar{
-  display: none;
-}
+    //-----------------btn bar--------------------
+    const bar2 = document.getElementById('bar2');
+    const tap2 = document.getElementById('tap2');
+    const tap3 = document.getElementById('tap3');
+    body=document.body;
 
-img.logo2{display: none;}
-
-@media(max-width:850px){
-.openbar{ display: block; width: 30px; cursor: pointer; margin: 15px;}
-.openbar span{display: block;height: 4px;width: 100%;background-color: black;margin: 5px 0;border-radius: 2px;}
-.openbar.active span:nth-child(1) {transform: rotate(45deg) translate(6px, 6px);}
-.openbar.active span:nth-child(2) {opacity: 0;}
-.openbar.active span:nth-child(3) {transform: rotate(-45deg) translate(7px, -7px);}
-
-  .img-logo{display: none;}
-  .dot1{display: none;}
-  .dot2{display: none;}
-  .logo{display: none;}
-
-  #bar2{visibility: hidden;height: 0;transition: 0.4s ease;position: relative;width: 100%;} 
-  #bar2.show{ visibility: visible; height: 300px;position: relative;width: 100%;}
-  #bar2.show2{ visibility: visible; height:auto;position: relative;}
-  #bar2.show3{ visibility: visible; height: auto;position: relative;}
-
-  #bar2 .tap1{width: 100%;display: flex;flex-direction: column;position: relative;}
-  
-  ul.tap2{ visibility: hidden;height: 0;transition: 0.4s ease;position: relative;opacity: 0; margin-top: 5px;}
-  .tap2.showtap2 {display: grid;visibility: visible;
-    height: auto;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity: 1;}
-
-  ul.tap3{ visibility: hidden;height: 0;transition: 0.4s ease;position: relative;opacity: 0;margin-top: 5px;width: 100%;}
-  .tap3.showtap3 {display: grid;grid-template-columns: repeat(3,auto);visibility: visible;
-                height:auto ;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity: 1;}
-
-  .logo2{display: block;}
- 
-  li.tap-li:hover ul.tap2{display: none; visibility: hidden; opacity: 0;}
-  li.tap-li3:hover ul.tap3{display: none; visibility: hidden; opacity: 0;}
-  /*------------------title small--------------------*/
-  .bg0,.title{background-attachment: scroll;}
-  /*------------------slide small--------------------*/
-  .bg{overflow: hidden;position: relative;height: 600px;}
-  .bg1 {width: 100%;margin: auto;}
-   #bg2 {position: absolute;}
-  .slidediv {width: 100%; margin-top: 0px;}
-  img.slide {width: 80%;}
-  div .textslide {width: 80%;padding: 10px;}
-  .dots{display: none;}
-  .btns{transform: translateY(300px);}
-  .btns button{background-color: #f30000;color: white;}
-  /*------------------article small scren--------------------*/
-
-    .art{position: relative;margin-top: 30px;width: 100% ;height:auto;min-height: 110vh;background-color: #637ef7;
-        background-image: url('https://img.freepik.com/free-photo/portrait-female-scientist-laboratory_23-2148816372.jpg?semt=ais_hybrid&w=740&q=80');
-        background-repeat: no-repeat;background-size: cover;background-position:center;}
-    .art .art-pargraph{width: 100%; padding: 10px; height: auto; text-align: center;background-color: #637ef7;}
-    .art .art-pargraph h2{font-size:1rem;text-align: center;width: 100%;}
-    .art div.art-two{display: block;text-align: center;width: 100%; height: auto;}
-    .art div.art-two .art-two1,.art div.art-two .art-two2{width: 100%;height: auto;border-radius: 20px;backdrop-filter: blur(10px);
-                                                          -webkit-backdrop-filter: blur(10px);background: rgba(0, 0, 0, 0.1); 
-                                                               margin: 15px 0;padding: 10px;}
-    /*------------------icons small scren--------------------*/
-    .icons{position: relative;width: 100%;height: 110vh;}
-    .icons .icons-head{margin-top: 10px;width:100%;height:auto;background-color: #637ef7;}
-    .icons-head h1{font-size: 1rem;padding: 10px;text-align: center;}
-     .icons-icon{width: 100%;height: auto;display: flex;}
-    .icons-icon .icons-icon1 {font-size: 10px; margin: 5px; width: 50%; height: 2rem;}
-    .icons-icon-content{display: grid;grid-template-columns:20% 1fr;width: 100%;cursor: pointer;}
-    .img-content{width: 20%;height: auto;}
-    .icons-icon-content img{width: 100%;height: auto;}
-    .icons-h{ margin: 0px;}
-    .icons-icon-content h4{font-size: 10px;}
-    p.icons-p{font-size: 10px;visibility: hidden}
-    .icons-icon-content:hover .icons-p{visibility: visible;}
-    .icons .icons-icon2{position: relative;margin: 0;width: 50%;height: auto;}
-    .icons-icon2 img{position: absolute;left: 0;width: 80%;height: 80%;}
-        /*------------------visit small scren--------------------*/
-        .visit-text h1{font-size: 20px;}
+function toggleMenu(bar) {
+  bar.classList.toggle("active");
+  bar2.classList.toggle("show");
 }
-nav.bar{
-    width: 100%;
-    background-color: rgb(117, 117, 230);
-    position: relative;
-}
-a{
-    text-decoration: none;
-}
-.img-logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.dot1{
-    height: 1px;
-    margin-right:auto;
-    text-align: right;
-    background-color: rgb(156, 107, 107);
-    animation-name: dot1;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-@keyframes dot1{
-  0%{font-size: 10px;}
-  30%{font-size: 30px; opacity: 0;}
-}
-.dot2{
-    height: 1px;
-    margin-left: auto;
-    background-color:rgb(156, 107, 107);
-    animation-name: dot1;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-img.logo{
-    margin: 4px;
-    border-radius: 25px;
-}
-
-.bar2{
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 50px;
-    z-index: 100;
-}
-.bar2.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  z-index: 999;
-  background-color: rgb(28, 13, 94);
-}
-.bar2.fixed li a{
-  color: white;
-}
-.bar2.fixed .tap2 li a,.bar2.fixed .tap3 li a{
-  color: rgb(0, 0, 0);
-}
-.bar2.fixed li a:hover{
-  color: rgb(150, 217, 250);
-} 
-ul.tap1{
-    display: flex;
-    list-style-type: none;
-    position: relative;
-}
-ul.tap1 li {
-    position: relative;
-    width: 100%;
-    margin: 10px;
-    font-size: 25px;
-}
-
-ul.tap1 li a{
-  position: relative;
-  width: 10%;   
-}
-ul.tap1 li a:hover {color: rgb(0, 0, 0);}
- a::after {
-  content: "";
-  width: 0px;
-  height: 3px;
-  position: absolute;
-  background-color: #0000ff;
-  left: 0px;
-  bottom: -5px;
-  transition: 0.3s;
-}
- a::before{
-  content: "";
-  width: 0px;
-  height: 3px;
-  position: absolute;
-  background-color: #0000ff;
-  right: 0px;
-  top: -5px;
-  transition: 0.3s;
-}
-ul.tap1 li a:hover:after,ul.tap1 li a:hover:before{
-  width: 100%;
-}
-
-ul.tap2 li a:hover:after , ul.tap2 li a:hover::before,
-ul.tap3 li a:hover:after , ul.tap3 li a:hover::before{
-  width: 0;
-}
-ul.tap3{
-  left: 0;
-  width: 340px;
-}
-
-ul.tap3, ul.tap2{
-  position: absolute;
-    transition: 0.6s;
-    list-style-type: none;
-    background-color: #ffffff;
-    margin-top: 10px;
-    opacity: 0;
-    visibility:hidden;
-    z-index: 50;
-}
-ul.tap2 li , ul.tap3 li{
-    transform: translateX(-40px);
-    font-size: 20px;    
-    padding: 10px;
-}
-ul.tap2 li a , ul.tap3 li a{
-   color: rgb(5, 0, 0);
-  
-}
-li.tap-li:hover ul.tap2 {
-  opacity: 1;
-  visibility: visible;
-  transition: 0.6s;
-  position: absolute;
-}
-li.tap-li3:hover ul.tap3{
-  visibility: visible;
-  display: grid;
-  position: absolute;
-  transition: 0.3s; 
-  opacity: 0.8;
-  grid-template-columns: repeat(3,1fr); 
-}
-/*--------------title------------------------*/
-.bg0{
-    width: 100%;
-    height: 800px;
-    background-image: url('https://irishpharmacist.ie/wp-content/uploads/2023/05/ip_may23_worldpharmaday.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-}
-.title{
-    text-align: center;
-    height: 600px;
-    background-image: url('https://healthcenter.puthisastra.edu.kh/wp-content/uploads/2024/05/Pharmacist-taking-medicine-from-shelf-.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    backdrop-filter: brightness(80%);
-    display: table-cell;
-    vertical-align: middle; 
-
-}
-
-.title::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: brightness(50%);
-    z-index: 0;
+function showtap2(){
+     tap2.classList.toggle("showtap2");
+  if(tap2.classList.contains("showtap2")){
+    tap3.classList.remove("showtap3");
+    bar2.classList.toggle("show2");
+  }else{
+    bar2.classList.remove("show2");
   }
-  .title * {
-    position: relative;
-    z-index: 1;
+}
+function showtap3(){
+     tap3.classList.toggle("showtap3");
+  if(tap3.classList.contains("showtap3")){
+    tap2.classList.remove("showtap2");
+    bar2.classList.toggle("show3");
+  } else {
+    bar2.classList.remove("show3");
   }
-.htitle{
- color: red;
- font-weight: bold;    
- animation-name: tit;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-.ptitle{
-    font-size: 25px;
-    color:white;
-    font-weight: bold;
-    font-style: italic;
-    animation-name: tit;
-    animation-duration: 6s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-@keyframes tit{
-    0%{opacity: 0;transform: translateY(10px);}
-    50%{transform: translateY(0px);}
-}
-/*--------------slide------------------------*/
-.bg{
-    position: relative;
-    height: 600px;
-}
-.bgh{
-    background-color: rgb(0, 0, 0);
-    border: 2px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.bgh h1{width: 100%;text-align: center;
-    color: rgb(255, 0, 0);
-    margin: 10px;
-}
-.bg1 {
-  overflow: hidden;
-  width: 90%;
-  margin: auto;
 }
 
-#bg2 {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-
-.slidediv {
-  min-width: 33.33%; /* لإظهار 3 صور */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.slide {
-  width: 70%;
-  transition: 0.4s ease;
-  border: 2px solid black;
-  border-radius: 0px 50px 0px 0px;
-  transition: transform 0.6s ease;
-}
-
-/* تكبير الصورة في المنتصف */
-.slidediv.center .slide {
-  width: 80%;
-}
-.slidediv.center .textslide{
-  width: 75%;
-}
- div .textslide {
-    bottom: 0px;
-    left: 0;
-    width: 70%;
-    color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 0px 0px 0px 50px;
-    box-shadow:0 9px 10px rgba(0, 0, 0, 0.25)
+body.addEventListener("click", (e) => {
+  if (!bar2.contains(e.target) &&!bar2.contains(e.target) && !tap2.contains(e.target)&& !tap3.contains(e.target)) {
+    bar2.classList.remove("show2");
+    bar2.classList.remove("show3");
+    tap2.classList.remove("showtap2");
+    tap3.classList.remove("showtap3");
   }
-.active{
-  opacity: 1;
-  transform: scale(1);
-}
-.btns{
-  background-color: #637ef7;
-  position: relative;
-}
-button.next, button.back{
-  width: 80px;
-  height: 20px;
-  position: absolute; 
-  top: 180px;
-}
-button.back{
-  left: 10px;
-}
-button.next{
-right: 0;
-margin-right: 10px;
-}
-.dots{
-  
-  margin-top: 60px;
-  width: 100%;
-  text-align: center;
-  background-color: black;
-}
-.dot{
-  height: 12px;
-  width: 12px;
-  margin: 0 4px;
-  display: inline-block;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.dot.active {
-  background: #f30000;
-}
-/*--------------article------------------------*/
-.art{
-  position: relative;
-  margin-top: 30px;
-  width: 100% ;
-  max-height: 800px;
-  background-color: #637ef7;
-  background-image: url('https://img.freepik.com/free-photo/portrait-female-scientist-laboratory_23-2148816372.jpg?semt=ais_hybrid&w=740&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center;
-}
-.art-pargraph{
-  width: 50%;
-  padding: 15px;
-  font-size: 2rem;
-}
-.art-two{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-}
-.art-two1{
-  padding: 15px;
-  width: 45%;
-  height: 400px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  background: rgba(0, 0, 0, 0.1); 
-  margin: 15px;
-}
-.art-two2{
-  padding: 15px;
-  width: 45%;
-  height: 400px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  background: rgba(3, 3, 3, 0.1); 
-  margin: 15px;
-}
-.p1{
-  font-size: 20px;
-  font-weight: bold;
-}
-.h1-p1{
-  font-weight: bold;
-}
-.h1-p1::first-letter{
-   font-size: 60px;
-   color: #637ef7;
-}
-.btn-p1{
-  border: 2px solid white;
-  color: white;
-  margin: 10px;
-  width: 200px;
-  min-height: 50px;
-  border-radius: 20px;
-  font-size: 15px;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-  background: rgba(3, 3, 3, 0.1); 
-}
-.btn-p1:hover{
-  color: red;
-  background-color: white;
-}
-.link-p1{
-  text-decoration: underline;
-}
-/*--------------icons------------------------*/
+});
 
-.icons{
-  position: relative;
-  width: 100%;
-  height: 600px;
-}
-.icons-head{
-  margin-top: 4px;
-  margin-left: 20px;
-  width: 65%;
-  height: 200px;
-  font-size: 30px;
-}
-.icons-icon{
-  
-  width: 100%;
-  height: 600px;
-  display: flex;
-}
-.icons-icon1{
-  font-size: 30px;
-  margin: 15px;
-  width: 50%;
-  height: 550px;
-}
-li{
-  list-style-type: none;
-}
-.icons-icon-content{
-  display: grid;
-  grid-template-columns: repeat(2,auto);
-  width: 100%;
-  cursor: pointer;
-}
-.icons-h{
-   margin: 0px;
-}
-.icons-p{
-  font-size: 15px;
-  visibility: hidden;
-}
-.icons-icon-content:hover .icons-p{
-  visibility: visible;
-}
-.icons-icon2{
-  position: relative;
-  margin: 15px;
-  width: 50%;
-  height: 550px;
-  
-}
+    //-----------------bar-position--------------------
+     const bar2position = document.querySelector('.bar2');
 
-.icons-icon2 img{
-  position: absolute;
-  left: 0;
-  width: 80%;
-  height: 80%;
-}
-/*--------------visit------------------------*/
-.main-visit{
-  position: relative;
-  transform: translateY(150px);
-  width: 100%;
-  height: 100px;
-  background-color: #637ef7;
-  display: grid;
-  grid-template-columns: repeat(2,2fr);
-  border-radius: 20px;
-  
-}
-.visit-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 2px white solid;
-  color: white;
-}
-.visit{
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*-------------load------------------------*/
-.load2{
-  width: 70%;
-  position: relative;
-  height: 500px;
-  transform: translateY(150px);
-  background-color: #0000ff;
-  margin-left: auto;
-  margin-right: auto;
-}
-.load{  
-  background-color: red;
-  height: 5px;  
-}
-#load-text{
-  width: 100%;
-  height: 490px;
-  text-align: center;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  transform: scale(0.9);
-  opacity: 0;
-}
+     window.addEventListener('scroll',()=>{
+         if(window.scrollY >= 300){
+             bar2position.classList.add('fixed');
+         }else{
+             bar2position.classList.remove('fixed');
+         }
+     })
+    
+    //-----------------bar2-word--------------------
 
+    let chars=['p','h','a','r'];
+    let chars2=['m','a','c','y'];
+    let dot1 = document.getElementById('dot1');
+        dot1.style.color='red';
+        dot1.style.fontSize= '50px'
+        dot1.style.width= '100%'
+    for(let i=0 ; i < chars.length ; i++){     
+        dot1.textContent += chars[i].toUpperCase();
+    }
+    for(let i=0 ; i < chars2.length ; i++){     
+      let dot2 = document.getElementById('dot2');
+        dot2.textContent += chars2[i].toUpperCase();
+        dot2.style.color='red';
+        dot2.style.fontSize= '50px'
+        dot2.style.width= '100%'
+    }
+    //-----------------bg slide--------------------
+
+    const slider = document.getElementById("bg2");
+    const dots = document.querySelectorAll(".dot");
+    
+    // تكبير العنصر الذي في المنتصف
+    function updateCenter() {
+        const all = document.querySelectorAll(".slidediv");
+        all.forEach(s => s.classList.remove("center"));
+       // if (all[1]) all[1].classList.add("center");
+    }
+    
+    // تحديث حالة النقاط
+    function updateDots() {
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[currentIndex].classList.add("active");
+    }
+    
+    let currentIndex = 0;
+    
+    // حركة NEXT بدون قفزة
+    function moveNext(auto = true) {
+        slider.style.transition = "0.6s ease";
+        slider.style.transform = "translateX(-33.33%)";
+    
+        slider.addEventListener("transitionend", function handler() {
+            slider.style.transition = "none";
+    
+            // نقل أول عنصر للنهاية
+            slider.appendChild(slider.firstElementChild);
+            slider.style.transform = "translateX(0%)";
+    
+            slider.removeEventListener("transitionend", handler);
+    
+            if (auto) currentIndex = (currentIndex + 1) % dots.length;
+    
+            updateCenter();
+            updateDots();
+        });
+    }
+    
+    // حركة BACK بدون قفزة
+    function movePrev() {
+        slider.style.transition = "none";
+    
+        // نقل آخر عنصر للبداية
+        slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+    
+        slider.style.transform = "translateX(-33.33%)";
+    
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                slider.style.transition = "0.6s ease";
+                slider.style.transform = "translateX(0%)";
+            });
+        });
+    
+        slider.addEventListener("transitionend", function handler() {
+            slider.style.transition = "none";
+            slider.removeEventListener("transitionend", handler);
+    
+            currentIndex = (currentIndex - 1 + dots.length) % dots.length;
+    
+            updateCenter();
+            updateDots();
+        });
+    }
+    // زر next
+    document.getElementById("next").onclick = () => moveNext();
+    
+    // زر back
+    document.getElementById("back").onclick = () => movePrev();
+    
+    // الضغط على النقاط
+    dots.forEach((dot, i) => {
+        dot.onclick = () => {
+            let diff = i - currentIndex;
+    
+            if (diff > 0) {
+                for (let x = 0; x < diff; x++) moveNext(false);
+            } else if (diff < 0) {
+                for (let x = 0; x < -diff; x++) movePrev();
+            }
+    
+            currentIndex = i;
+            updateDots();
+        };
+    });
+    
+    // Auto
+    setInterval(() => moveNext(), 3000);
+    
+    updateCenter();
+    updateDots();
+        //-----------------icon--------------------
+
+        const texts = document.querySelectorAll('.icons-icon-content');
+        const images = document.querySelectorAll('.img');
+
+
+        texts.forEach(text =>{
+            const imgid = text.dataset.img;
+            const img = document.getElementById(imgid);
+
+            text.addEventListener('mouseover',()=>{
+                images.forEach(i =>
+                    i.style.display='none');
+                    img.style.display='block';
+            });
+        });
+ //-----------------visit--------------------
+
+  let visitcount = localStorage.getItem('visit');
+  if(!visitcount){
+    visitcount=0;
+  }
+    visitcount++;
+  
+  localStorage.setItem("visit",visitcount);
+  document.getElementById('visitcount').textContent = visitcount;
+
+   //-----------------load--------------------
+
+   let load = document.getElementById('load');
+   let loadelem = document.getElementById('load-text');
+   
+   let loadtext = [
+     'https://static.vecteezy.com/system/resources/thumbnails/010/417/055/small/african-american-pharmacist-working-in-drugstore-at-hospital-pharmacy-african-healthcare-photo.jpg',
+     'https://img.freepik.com/free-photo/young-hispanic-woman-pharmacist-smiling-confident-standing-with-arms-crossed-gesture-pharmacy_839833-7087.jpg?semt=ais_hybrid&w=740&q=80'
+   ];
+   
+   let index = 0;
+   
+   function reset() {
+     load.style.transition = 'none';
+     load.style.width = '0%';
+   
+     setTimeout(() => {
+       load.style.transition = 'width 3s linear';
+       load.style.width = '100%';
+     }, 100);
+   
+     loadelem.style.opacity = '0';
+     loadelem.style.transform = 'scale(0.9)';
+   
+     setTimeout(() => {
+       index = (index + 1) % loadtext.length;
+       loadelem.src = loadtext[index];
+   
+       loadelem.style.opacity = '1';
+       loadelem.style.transform = 'scale(1)';
+     }, 200);
+   
+     setTimeout(reset, 3000);
+   }
+   
+   reset();
    
  
   
-
 
 
 
