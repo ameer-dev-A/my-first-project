@@ -61,7 +61,7 @@ img.logo2{display: none;}
 
     .art{position: relative;margin-top: 30px;width: 100% ;height:auto;min-height: 110vh;background-color: #637ef7;
         background-image: url('https://img.freepik.com/free-photo/portrait-female-scientist-laboratory_23-2148816372.jpg?semt=ais_hybrid&w=740&q=80');
-        background-repeat: no-repeat;background-size: cover;background-position:center;}
+        background-repeat: no-repeat;background-size: cover;background-position:center;margin-bottom: 200px;}
     .art .art-pargraph{width: 100%; padding: 10px; height: auto; text-align: center;background-color: #637ef7;}
     .art .art-pargraph h2{font-size:1rem;text-align: center;width: 100%;}
     .art div.art-two{display: block;text-align: center;width: 100%; height: auto;}
@@ -572,6 +572,7 @@ li{
   transform: scale(0.9);
   opacity: 0;
 }
+
 
 
 
