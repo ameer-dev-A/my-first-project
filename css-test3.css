@@ -84,6 +84,7 @@ img.logo2{display: none;}
     .icons .icons-icon2{position: relative;margin: 0;width: 50%;height: auto;}
     .icons-icon2 img{position: absolute;left: 0;width: 80%;height: 80%;}
         /*------------------visit small scren--------------------*/
+       .main-visit{background-color: #f30000;} 
         .visit-text h1{font-size: 20px;}
 }
 nav.bar{
@@ -572,6 +573,7 @@ li{
   transform: scale(0.9);
   opacity: 0;
 }
+
 
 
 
