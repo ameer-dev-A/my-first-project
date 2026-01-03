@@ -1,3 +1,41 @@
+     //-----------------btn bar--------------------
+    const bar2 = document.getElementById('bar2');
+    const tap2 = document.getElementById('tap2');
+    const tap3 = document.getElementById('tap3');
+    body=document.body;
+
+function toggleMenu(bar) {
+  bar.classList.toggle("active");
+  bar2.classList.toggle("show");
+}
+function showtap2(){
+     tap2.classList.toggle("showtap2");
+  if(tap2.classList.contains("showtap2")){
+    tap3.classList.remove("showtap3");
+    bar2.classList.toggle("show2");
+  }else{
+    bar2.classList.remove("show2");
+  }
+}
+function showtap3(){
+     tap3.classList.toggle("showtap3");
+  if(tap3.classList.contains("showtap3")){
+    tap2.classList.remove("showtap2");
+    bar2.classList.toggle("show3");
+  } else {
+    bar2.classList.remove("show3");
+  }
+}
+
+body.addEventListener("click", (e) => {
+  if (!bar2.contains(e.target) &&!bar2.contains(e.target) && !tap2.contains(e.target)&& !tap3.contains(e.target)) {
+    bar2.classList.remove("show2");
+    bar2.classList.remove("show3");
+    tap2.classList.remove("showtap2");
+    tap3.classList.remove("showtap3");
+  }
+});
+
     //-----------------bar-position--------------------
      const bar2position = document.querySelector('.bar2');
 
