@@ -58,7 +58,7 @@ img.logo2{display: none;}
   transition: transform 0.6s ease;
 }
 
-.slidediv {
+. bg .slidediv {
   position: absolute ;
   width:100%; /* لإظهار 3 صور */
   display:block ;
