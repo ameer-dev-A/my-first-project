@@ -69,7 +69,7 @@ img.logo2{display: none;}
                                                           -webkit-backdrop-filter: blur(10px);background: rgba(0, 0, 0, 0.1); 
                                                                margin: 15px 0;padding: 10px;}
     /*------------------icons small scren--------------------*/
-    .icons{position: relative;width: 100%;height: 110vh;transform: translateY(600px);}
+    .icons{position: relative;width: 100%;height: 110vh;margin-top:400px}
     .icons .icons-head{margin-top: 10px;width:100%;height:auto;background-color: #637ef7;}
     .icons-head h1{font-size: 1rem;padding: 10px;text-align: center;}
      .icons-icon{width: 100%;height: auto;display: flex;}
@@ -572,6 +572,7 @@ li{
   transform: scale(0.9);
   opacity: 0;
 }
+
 
 
 
