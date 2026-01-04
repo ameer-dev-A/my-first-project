@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
-  Clear:both;
 }
 body{
     margin: 0;
     padding: 0;
+    Clear:both;
     font-family: 'Times New Roman', Times, serif;
 }
 .openbar{
@@ -68,7 +68,7 @@ img.logo2{display: none;}
                                                           -webkit-backdrop-filter: blur(10px);background: rgba(0, 0, 0, 0.1); 
                                                                margin: 15px 0;padding: 10px;}
     /*------------------icons small scren--------------------*/
-     div.icons{position:relative ;width: 100%;max-height: 90vh;transform: translateY(100px);display:block;background-color:red;}
+     div.icons{position:relative ;width: 100%;max-height: 90vh;transform: translateY(100px);background-color:red;}
     .icons .icons-head{margin-top: 10px;width:100%;height:auto;
 background-color:#637ef7;overflow:hidden ;
 margin-bottom:10px;display:block}
@@ -85,10 +85,10 @@ margin-bottom:10px;display:block}
     .icons .icons-icon2{position: relative;margin: 0;width: 50%;height: auto;}
     .icons-icon2 img{position: absolute;left: 0;width: 80%;height: 80%;}
         /*------------------visit small scren--------------------*/
-  .main-visit{position: relative;
+  div.main-visit{position: relative;
   transform: translateY(550px);
   width: 100%;
-  height: 100px;
+  height:auto;
   background-color: #637ef7;
   display: grid;
   grid-template-columns: repeat(2,2fr);
