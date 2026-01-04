@@ -52,7 +52,7 @@ img.logo2{display: none;}
    #bg2 {position: absolute;}
   .slidediv {width: 100%; margin-top: 0px;}
   img.slide {width: 80%;}
-  div .textslide {width: 80%;padding: 10px;}
+  div .textslide {width: 85%;padding: 10px;}
   .dots{display: none;}
   .btns{transform: translateY(300px);}
   .btns button{background-color: #f30000;color: white;}
