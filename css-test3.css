@@ -59,7 +59,7 @@ img.logo2{display: none;}
   .btns button{background-color: #f30000;color: white;}
   /*------------------article small scren--------------------*/
 
-    .art{position: relative;margin-bottom:30px;margin-top: 30px;width: 100% ;height:auto;min-height: 110vh;background-color: #637ef7;
+    .art{position:relative;margin-bottom:90px;margin-top: 30px;width: 100% ;height:auto;min-height: 110vh;background-color: #637ef7;
         background-image: url('https://img.freepik.com/free-photo/portrait-female-scientist-laboratory_23-2148816372.jpg?semt=ais_hybrid&w=740&q=80');
         background-repeat: no-repeat;background-size: cover;background-position:center;margin-bottom: 200px;}
     .art .art-pargraph{width: 100%; padding: 10px; height: auto; text-align: center;background-color: #637ef7;}
@@ -69,7 +69,7 @@ img.logo2{display: none;}
                                                           -webkit-backdrop-filter: blur(10px);background: rgba(0, 0, 0, 0.1); 
                                                                margin: 15px 0;padding: 10px;}
     /*------------------icons small scren--------------------*/
-     div.icons{width: 100%;max-height: 90vh;transform: translateY(100px);display:block;background-color:red;}
+     div.icons{position:absolute;width: 100%;max-height: 90vh;transform: translateY(100px);display:block;background-color:red;}
     .icons .icons-head{margin-top: 10px;width:100%;height:auto;background-color: #637ef7;overflow:hidden }
     .icons-head h1{font-size: 1rem;padding: 10px;text-align: center;}
      .icons-icon{width: 100%;height: auto;display: flex;}
