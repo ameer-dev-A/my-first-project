@@ -84,7 +84,7 @@ margin-bottom:10px;display:block}
     .icons .icons-icon2{position: relative;margin: 0;width: 50%;height: auto;}
     .icons-icon2 img{position: absolute;left: 0;width: 80%;height: 80%;}
         /*------------------visit small scren--------------------*/
-  .main-visit{transform:translateY(300px);position:relative}  
+  .main-visit{}  
 .visit-text h1{font-size: 20px;}
 }
 nav.bar{
