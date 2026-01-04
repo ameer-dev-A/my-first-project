@@ -24,7 +24,22 @@ img.logo2{display: none;}
   .dot1{display: none;}
   .dot2{display: none;}
   .logo{display: none;}
-
+li.tap-li:hover ul.tap2 {
+  opacity: 1;
+display :none;
+  visibility: hidden ;
+  transition: 0.6s;
+  position: absolute;
+}
+li.tap-li3:hover ul.tap3{
+  visibility: hidden ;
+display :none;
+  display: grid;
+  position: absolute;
+  transition: 0.3s; 
+  opacity: 0.8;
+  grid-template-columns: repeat(3,1fr); 
+}
   #bar2{visibility: hidden;height: 0;transition: 0.4s ease;position: relative;width: 100%;} 
   #bar2.show{ visibility: visible; height: 300px;position: relative;width: 100%;}
   #bar2.show2{ visibility: visible; height:auto;position: relative;}
