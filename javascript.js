@@ -1,13 +1,25 @@
     //-----------------btn bar--------------------
     const bar2 = document.getElementById('bar2');
     const tap2 = document.getElementById('tap2');
+    const tapli = document.getElementById('tap-li');
     const tap3 = document.getElementById('tap3');
+    const tapli3 = document.getElementById('tap-li3');
     body=document.body;
 
 function toggleMenu(bar) {
   bar.classList.toggle("active");
   bar2.classList.toggle("show");
 }
+
+tapli.addEventListener("click", () => {
+  if (tap2.style.display === "block") {
+    tap2.style.display = "none"; // إغلاق
+  } else {
+    tap2.style.display = "block"; // فتح
+  }
+});
+
+
 function showtap2(){
      tap2.classList.toggle("showtap2");
   if(tap2.classList.contains("showtap2")){
@@ -17,6 +29,13 @@ function showtap2(){
     bar2.classList.remove("show2");
   }
 }
+tapli3.addEventListener("click", () => {
+  if (tap3.style.display === "grid") {
+    tap3.style.display = "none"; // إغلاق
+  } else {
+    tap3.style.display = "grid"; // فتح
+  }
+});
 function showtap3(){
      tap3.classList.toggle("showtap3");
   if(tap3.classList.contains("showtap3")){
@@ -225,6 +244,14 @@ body.addEventListener("click", (e) => {
    
  
   
+
+
+
+
+
+ 
+  
+
 
 
 
