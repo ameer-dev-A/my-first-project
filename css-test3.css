@@ -4,7 +4,8 @@
 body{
     margin: 0;
     padding: 0;
-    Clear:both;
+    width: 100%;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
 .openbar{
@@ -24,15 +25,7 @@ img.logo2{display: none;}
   .dot1{display: none;}
   .dot2{display: none;}
   .logo{display: none;}
-li.tap-li:hover ul.tap2 {
-display :none;
-  visibility: hidden ;
- 
-}
-li.tap-li3:hover ul.tap3{
-  visibility: hidden ;
-display :none; 
-}
+
   #bar2{visibility: hidden;height: 0;transition: 0.4s ease;position: relative;width: 100%;} 
   #bar2.show{ visibility: visible; height: 300px;position: relative;width: 100%;}
   #bar2.show2{ visibility: visible; height:auto;position: relative;}
@@ -40,11 +33,11 @@ display :none;
 
   #bar2 .tap1{width: 100%;display: flex;flex-direction: column;position: relative;}
   
-  ul.tap2{ visibility: hidden;transition: 0.4s ease;position: relative;opacity: 0;margin-top: 5px;width: 100% }
-  .tap2.showtap2 {display: grid;
-    height: auto;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity:1}
+  ul.tap2{ visibility: hidden;height: 0;transition: 0.4s ease;position: relative;opacity: 0; margin-top: 5px;}
+  .tap2.showtap2 {display: grid;visibility: visible;
+    height: auto;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity: 1;}
 
-  ul.tap3{ visibility: hidden;transition: 0.4s ease;position: relative;opacity: 0;margin-top: 5px;width: 100%;}
+  ul.tap3{ visibility: hidden;height: 0;transition: 0.4s ease;position: relative;opacity: 0;margin-top: 5px;width: 100%;}
   .tap3.showtap3 {display: grid;grid-template-columns: repeat(3,auto);visibility: visible;
                 height:auto ;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity: 1;}
 
@@ -60,26 +53,24 @@ display :none;
    #bg2 {position: absolute;}
   .slidediv {width: 100%; margin-top: 0px;}
   img.slide {width: 80%;}
-  div .textslide {width: 85%;padding: 10px;}
+  div .textslide {width: 80%;padding: 10px;}
   .dots{display: none;}
   .btns{transform: translateY(300px);}
   .btns button{background-color: #f30000;color: white;}
   /*------------------article small scren--------------------*/
 
-    .art{position:relative;margin-bottom:90px;margin-top: 30px;width: 100% ;height:auto;min-height: 110vh;background-color: #637ef7;
+    .art{position: relative;margin-top: 30px;width: 100% ;height:auto;min-height: 110vh;background-color: #637ef7;
         background-image: url('https://img.freepik.com/free-photo/portrait-female-scientist-laboratory_23-2148816372.jpg?semt=ais_hybrid&w=740&q=80');
-        background-repeat: no-repeat;background-size: cover;background-position:center;margin-bottom: 200px;}
+        background-repeat: no-repeat;background-size: cover;background-position:center;}
     .art .art-pargraph{width: 100%; padding: 10px; height: auto; text-align: center;background-color: #637ef7;}
     .art .art-pargraph h2{font-size:1rem;text-align: center;width: 100%;}
     .art div.art-two{display: block;text-align: center;width: 100%; height: auto;}
     .art div.art-two .art-two1,.art div.art-two .art-two2{width: 100%;height: auto;border-radius: 20px;backdrop-filter: blur(10px);
                                                           -webkit-backdrop-filter: blur(10px);background: rgba(0, 0, 0, 0.1); 
-                                                               margin: 15px 0;padding: 10px;}
+                                                              margin: 15px 0;padding: 10px;}
     /*------------------icons small scren--------------------*/
-     div.icons{position:relative ;width: 100%;max-height: 90vh;transform: translateY(100px);background-color:red;}
-    .icons .icons-head{margin-top: 10px;width:100%;height:auto;
-background-color:#637ef7;overflow:hidden ;
-margin-bottom:10px;display:block}
+    .icons{position: relative;width: 100%;height: 110vh;margin-bottom: 200px;}
+    .icons .icons-head{margin-top: 10px;width:100%;height:auto;background-color: #637ef7;}
     .icons-head h1{font-size: 1rem;padding: 10px;text-align: center;}
      .icons-icon{width: 100%;height: auto;display: flex;}
     .icons-icon .icons-icon1 {font-size: 10px; margin: 5px; width: 50%; height: 2rem;}
@@ -93,16 +84,7 @@ margin-bottom:10px;display:block}
     .icons .icons-icon2{position: relative;margin: 0;width: 50%;height: auto;}
     .icons-icon2 img{position: absolute;left: 0;width: 80%;height: 80%;}
         /*------------------visit small scren--------------------*/
-  div.main-visit{position:absolute;
-  
-  transform: translateY(550px);
-  width: 100%;
-  height:auto;
-  background-color: #637ef7;
-  display: grid;
-  grid-template-columns: repeat(2,2fr);
-  border-radius: 20px;}  
-.visit-text h1{font-size: 20px;}
+        .visit-text h1{font-size: 20px;}
 }
 nav.bar{
     width: 100%;
@@ -219,15 +201,25 @@ ul.tap3{
   width: 340px;
 }
 
-ul.tap3, ul.tap2{
-  position: absolute;
+ ul.tap2{
+    position: absolute;
     transition: 0.6s;
     list-style-type: none;
     background-color: #ffffff;
     margin-top: 10px;
-    opacity: 0;
-    visibility:hidden;
+    display: none;
     z-index: 50;
+}
+
+ul.tap3{
+  position: absolute;
+  transition: 0.6s;
+  list-style-type: none;
+  background-color: #ffffff;
+  margin-top: 10px;
+  display: none;
+  z-index: 50;
+  grid-template-columns: repeat(3,1fr); 
 }
 ul.tap2 li , ul.tap3 li{
     transform: translateX(-40px);
@@ -237,20 +229,6 @@ ul.tap2 li , ul.tap3 li{
 ul.tap2 li a , ul.tap3 li a{
    color: rgb(5, 0, 0);
   
-}
-li.tap-li:hover ul.tap2 {
-  opacity: 1;
-  visibility: visible;
-  transition: 0.6s;
-  position: absolute;
-}
-li.tap-li3:hover ul.tap3{
-  visibility: visible;
-  display: grid;
-  position: absolute;
-  transition: 0.3s; 
-  opacity: 0.8;
-  grid-template-columns: repeat(3,1fr); 
 }
 /*--------------title------------------------*/
 .bg0{
@@ -549,6 +527,7 @@ li{
   transform: translateY(150px);
   width: 100%;
   height: 100px;
+  background-color: rgb(245, 0, 0);
   background-color: #637ef7;
   display: grid;
   grid-template-columns: repeat(2,2fr);
@@ -590,6 +569,8 @@ li{
   transform: scale(0.9);
   opacity: 0;
 }
+
+
 
 
 
