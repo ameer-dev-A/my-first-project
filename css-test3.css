@@ -46,7 +46,7 @@ img.logo2{display: none;}
   li.tap-li:hover ul.tap2{display: none; visibility: hidden; opacity: 0;}
   li.tap-li3:hover ul.tap3{display: none; visibility: hidden; opacity: 0;}
   /*------------------title small--------------------*/
-  .bg0,.title{background-attachment: scroll;}
+  p.ptitle{font-size: 15px;}
   /*------------------slide small--------------------*/
   .bg{overflow: hidden;position: relative;height: 600px;}
   .bg1 {width: 100%;margin: auto;}
@@ -69,8 +69,8 @@ img.logo2{display: none;}
                                                           -webkit-backdrop-filter: blur(10px);background: rgba(0, 0, 0, 0.1); 
                                                               margin: 15px 0;padding: 10px;}
     /*------------------icons small scren--------------------*/
-    .icons{position: relative;width: 100%;height: 110vh;margin-bottom: 200px;}
-    .icons .icons-head{margin-top: 10px;width:100%;height:auto;background-color: #637ef7;}
+    .icons{position: relative;width: 100%;height: 100vh;}
+    .icons .icons-head{margin-top: 50px;width:100%;height:auto;background-color: #637ef7;}
     .icons-head h1{font-size: 1rem;padding: 10px;text-align: center;}
      .icons-icon{width: 100%;height: auto;display: flex;}
     .icons-icon .icons-icon1 {font-size: 10px; margin: 5px; width: 50%; height: 2rem;}
@@ -84,6 +84,7 @@ img.logo2{display: none;}
     .icons .icons-icon2{position: relative;margin: 0;width: 50%;height: auto;}
     .icons-icon2 img{position: absolute;left: 0;width: 80%;height: 80%;}
         /*------------------visit small scren--------------------*/
+        .main-visit{        transform: translateY(0px);}
         .visit-text h1{font-size: 20px;}
 }
 nav.bar{
@@ -232,14 +233,15 @@ ul.tap2 li a , ul.tap3 li a{
 }
 /*--------------title------------------------*/
 .bg0{
+  min-height: 70vh;
     width: 100%;
-    height: 800px;
     background-image: url('https://irishpharmacist.ie/wp-content/uploads/2023/05/ip_may23_worldpharmaday.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
 }
 .title{
+  position: relative;
     text-align: center;
     height: 600px;
     background-image: url('https://healthcenter.puthisastra.edu.kh/wp-content/uploads/2024/05/Pharmacist-taking-medicine-from-shelf-.jpg');
@@ -569,6 +571,8 @@ li{
   transform: scale(0.9);
   opacity: 0;
 }
+
+
 
 
 
