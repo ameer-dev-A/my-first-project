@@ -15,7 +15,9 @@ body{
 img.logo2{display: none;}
 
 @media(max-width:850px){
-.openbar{ display: block; width: 30px; cursor: pointer; margin: 15px;}
+  nav.bar{height:10vh;}
+  img.logo2{display:block;position: absolute;right: 30px;top: 0;margin: 10px;;width: 60px;height: auto;}
+.openbar{ display:block; width: 30px; cursor: pointer; margin: 25px;}
 .openbar span{display: block;height: 4px;width: 100%;background-color: black;margin: 5px 0;border-radius: 2px;}
 .openbar.active span:nth-child(1) {transform: rotate(45deg) translate(6px, 6px);}
 .openbar.active span:nth-child(2) {opacity: 0;}
@@ -26,26 +28,23 @@ img.logo2{display: none;}
   .dot2{display: none;}
   .logo{display: none;}
 
-  #bar2{visibility: hidden;height: 0;transition: 0.4s ease;position: relative;width: 100%;} 
+   #bar2{visibility: hidden;height: 0;transition: 0.4s ease;position: relative;width: 100%;} 
   #bar2.show{ visibility: visible; height: 300px;position: relative;width: 100%;}
   #bar2.show2{ visibility: visible; height:auto;position: relative;}
   #bar2.show3{ visibility: visible; height: auto;position: relative;}
 
   #bar2 .tap1{width: 100%;display: flex;flex-direction: column;position: relative;}
   
-  ul.tap2{ visibility: hidden;height: 0;transition: 0.4s ease;position: relative;opacity: 0; margin-top: 5px;}
-  .tap2.showtap2 {display: grid;visibility: visible;
-    height: auto;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity: 1;}
+  ul.tap2{display: none; transition: 0.4s ease;position: relative; margin-top: 5px;opacity: 1;}
+  .tap2.showtap2 {display: grid;opacity: 1;
+    height: auto;position: relative;background-color: rgb(189, 180, 168);z-index: 100;}
 
-  ul.tap3{ visibility: hidden;height: 0;transition: 0.4s ease;position: relative;opacity: 0;margin-top: 5px;width: 100%;}
-  .tap3.showtap3 {display: grid;grid-template-columns: repeat(3,auto);visibility: visible;
-                height:auto ;position: relative;background-color: rgb(189, 180, 168);z-index: 100;opacity: 1;}
+  ul.tap3{transition: 0.4s ease;position: relative;margin-top: 5px;width: 100%;opacity: 1;}
+  .tap3.showtap3 {display: grid;grid-template-columns: repeat(3,auto);opacity: 1;
+                height:auto ;position: relative;background-color: rgb(189, 180, 168);z-index: 100;}
 
   .logo2{display: block;}
- 
-  li.tap-li:hover ul.tap2{display: none; visibility: hidden; opacity: 0;}
-  li.tap-li3:hover ul.tap3{display: none; visibility: hidden; opacity: 0;}
-  /*------------------title small--------------------*/
+   /*------------------title small--------------------*/
   p.ptitle{font-size: 15px;}
   /*------------------slide small--------------------*/
   .bg{overflow: hidden;position: relative;height: 600px;}
@@ -571,6 +570,8 @@ li{
   transform: scale(0.9);
   opacity: 0;
 }
+
+
 
 
 
