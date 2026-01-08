@@ -1,4 +1,10 @@
-    //-----------------btn bar--------------------
+  //  ------------------loadpage--------------------
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+  
+
+   //-----------------btn bar--------------------
     const bar2 = document.querySelector('.bar2');
     const tap2 = document.querySelector('.tap2');
     const tapli = document.querySelector('.tap-li');
@@ -12,13 +18,16 @@ function toggleMenu(bar) {
 }  
 tapli.addEventListener("click", (e) => {
   e.stopPropagation();
+  tap2.classList.toggle("showtap2bigscreen")
   tap2.classList.toggle("showtap2");
   tap3.classList.remove("showtap3");
   bar2.classList.add("show2");
 });
 
+
 tapli3.addEventListener("click", (e) => {
   e.stopPropagation();
+  tap3.classList.toggle("showtap3bigscreen")
   tap3.classList.toggle("showtap3");
   tap2.classList.remove("showtap2");
   bar2.classList.add("show3");
@@ -29,61 +38,17 @@ document.body.addEventListener("click", () => {
   tap3.classList.remove("showtap3");
   bar2.classList.remove("show2", "show3");
 });
-// tapli.addEventListener("click", () => {
-//   if (tap2.style.display === "block") {
-//     tap2.style.display = "none"; // إغلاق
-//   } else {
-//     tap2.style.display = "block"; // فتح
-//   }
-// });
-
-// function showtap2(){
-//   tap2.classList.toggle("showtap2");
-// if(tap2.classList.contains("showtap2")){
-//   tap3.classList.remove("showtap3");
-//   bar2.classList.toggle("show2");
-// } else {
-//   bar2.classList.remove("show3");
-// }
-// }
-// tapli3.addEventListener("click", () => {
-//   if (tap3.style.display === "grid") {
-//     tap3.style.display = "none"; // إغلاق
-//   } else {
-//     tap3.style.display = "grid"; // فتح
-//   }
-// });
-// function showtap3(){
-//      tap3.classList.toggle("showtap3");
-//   if(tap3.classList.contains("showtap3")){
-//     tap2.classList.remove("showtap2");
-//     bar2.classList.toggle("show3");
-//   } else {
-//     bar2.classList.remove("show3");
-//   }
-// }
-
-// body.addEventListener("click", (e) => {
-//   if (!bar2.contains(e.target) &&!bar2.contains(e.target) && !tap2.contains(e.target)&& !tap3.contains(e.target)) {
-//     bar2.classList.remove("show2");
-//     bar2.classList.remove("show3");
-//     tap2.classList.remove("showtap2");
-//     tap3.classList.remove("showtap3");
-//   }
-// });
 
     //-----------------bar-position--------------------
-     const bar2position = document.querySelector('.bar2');
-
-     window.addEventListener('scroll',()=>{
+    const bar2position = document.querySelector('.bar2');
+    window.addEventListener('scroll',()=>{
          if(window.scrollY >= 300){
              bar2position.classList.add('fixed');
          }else{
              bar2position.classList.remove('fixed');
          }
-        
      })
-    
+  
     //-----------------bar2-word--------------------
 
     let chars=['p','h','a','r'];
@@ -267,6 +232,13 @@ document.body.addEventListener("click", () => {
 
 
 
+ 
+  
+
+
+
+
+
    
  
   
@@ -277,6 +249,7 @@ document.body.addEventListener("click", () => {
 
  
   
+
 
 
 
