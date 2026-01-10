@@ -1,6 +1,8 @@
   //  ------------------loadpage--------------------
   window.addEventListener("load", () => {
-    document.getElementById("loader").style.display = "none";
+    setTimeout(()=>{
+          document.getElementById("loader").style.display = "none";
+    },3000)
   });
   
 
@@ -225,6 +227,16 @@ document.body.addEventListener("click", () => {
    
    reset();
    
+//------------------footer-------------------
+let datah2 = document.querySelector('.dateright');
+datah2.textContent = new Date().getFullYear();
+  
+
+
+
+
+
+   
  
   
 
@@ -249,6 +261,7 @@ document.body.addEventListener("click", () => {
 
  
   
+
 
 
 
