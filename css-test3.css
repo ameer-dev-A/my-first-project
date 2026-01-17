@@ -137,7 +137,7 @@ img.logo2{display: none;}
         z-index: 9999;
     }
     .shapeload {
-      width: 10%;
+      width: 40%;
       height: auto;
       border: 6px solid #38bdf8;
       border-top-color: transparent;
@@ -705,6 +705,7 @@ iframe{
    border:0; 
 }
 mailto a{font-size: 25px;}
+
 
 
 
