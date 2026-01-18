@@ -40,11 +40,11 @@ button{cursor: pointer;border-radius: 50px;}
   
   ul.tap2{display: none; transition: 0.4s ease;position: relative; margin-top: 5px;opacity: 1;}
   .tap2.showtap2 {display: grid;opacity: 1;
-    height: auto;position: relative;background-color: rgb(189, 180, 168);z-index: 100;}
+    height: auto;position: relative;background-color: rgb(255, 255, 255);z-index: 100;}
 
   ul.tap3{transition: 0.4s ease;position: relative;margin-top: 5px;width: 100%;opacity: 1;}
   .tap3.showtap3 {display: grid;grid-template-columns: repeat(3,auto);opacity: 1;
-                height:auto ;position: relative;background-color: rgb(189, 180, 168);z-index: 100;}
+                height:auto ;position: relative;background-color: rgb(255, 255, 255);z-index: 100;}
 
   .logo2{display: block;}
    /*------------------title small--------------------*/
@@ -708,6 +708,7 @@ iframe{
    border:0; 
 }
 mailto a{font-size: 25px;}
+
 
 
 
