@@ -72,14 +72,14 @@ button{cursor: pointer;border-radius: 50px;}
   
   p.ptitle{font-size: 15px;}
   /*------------------slide small--------------------*/
-  .bg{overflow: hidden;position: relative;height: 600px;}
+  div.bg{overflow: hidden;position: relative;height: 400px;}
   .bg .bg1 {width: 100%;margin: auto;}
-   #bg2 {position: absolute;}
+   #bg2 {position: relative;}
   .slidediv {width: 100%; margin-top: 0px;}
   img.slide {width: 80%;}
-  div .textslide {width: 80%;padding: 10px;}
+  .slidediv .textslide {width:80%;padding: 10px; font-size: 0.5rem;}
   .dots{display: none;}
-  .btns{transform: translateY(300px);}
+  .btns{transform: translateY(100px);}
   .btns button{background-color: #f30000;color: white;}
   /*------------------article small scren--------------------*/
 
@@ -708,6 +708,7 @@ iframe{
    border:0; 
 }
 mailto a{font-size: 25px;}
+
 
 
 
