@@ -2,45 +2,84 @@
   window.addEventListener("load", () => {
     setTimeout(()=>{
           document.getElementById("loader").style.display = "none";
-    },3000)
+    },2000)
   });
   
 
    //-----------------btn bar--------------------
-    const bar2 = document.querySelector('.bar2');
-    const tap2 = document.querySelector('.tap2');
-    const tapli = document.querySelector('.tap-li');
-    const tap3 = document.querySelector('.tap3');
-    const tapli3 = document.querySelector('.tap-li3');
-    body=document.body;
+//     const bar2 = document.querySelector('.bar2');
+//     const tap2 = document.querySelector('.tap2');
+//     const tapli = document.querySelector('.tap-li');
+//     const tap3 = document.querySelector('.tap3');
+//     const tapli3 = document.querySelector('.tap-li3');
+//     body=document.body;
 
+// function toggleMenu(bar) {
+//   bar.classList.toggle("active");
+//   bar2.classList.toggle("show");
+// }  
+// tapli.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   tap2.classList.toggle("showtap2bigscreen")
+//   tap2.classList.toggle("showtap2");
+//   tap3.classList.remove("showtap3");
+//   bar2.classList.add("show2");
+// });
+
+
+// tapli3.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   tap3.classList.toggle("showtap3bigscreen")
+//   tap3.classList.toggle("showtap3");
+//   tap2.classList.remove("showtap2");
+//   bar2.classList.add("show3");
+// });
+
+// document.body.addEventListener("click", () => {
+//   tap2.classList.remove("showtap2");
+//   tap3.classList.remove("showtap3");
+//   bar2.classList.remove("show2", "show3");
+// });
+// ----------------- btn bar --------------------
+const bar2 = document.querySelector('.bar2');
+const tap2 = document.querySelector('.tap2');
+const tapli = document.querySelector('.tap-li');
+const tap3 = document.querySelector('.tap3');
+const tapli3 = document.querySelector('.tap-li3');
+const body = document.body;
 function toggleMenu(bar) {
   bar.classList.toggle("active");
   bar2.classList.toggle("show");
 }  
+// open tap2
 tapli.addEventListener("click", (e) => {
   e.stopPropagation();
-  tap2.classList.toggle("showtap2bigscreen")
-  tap2.classList.toggle("showtap2");
-  tap3.classList.remove("showtap3");
+
+  tap2.classList.add("showtap2", "showtap2bigscreen");
+  tap3.classList.remove("showtap3", "showtap3bigscreen");
+
   bar2.classList.add("show2");
+  bar2.classList.remove("show3");
 });
 
-
+// open tap3
 tapli3.addEventListener("click", (e) => {
   e.stopPropagation();
-  tap3.classList.toggle("showtap3bigscreen")
-  tap3.classList.toggle("showtap3");
-  tap2.classList.remove("showtap2");
+
+  tap3.classList.add("showtap3", "showtap3bigscreen");
+  tap2.classList.remove("showtap2", "showtap2bigscreen");
+
   bar2.classList.add("show3");
+  bar2.classList.remove("show2");
 });
 
-document.body.addEventListener("click", () => {
-  tap2.classList.remove("showtap2");
-  tap3.classList.remove("showtap3");
+// click outside → close all
+body.addEventListener("click", () => {
+  tap2.classList.remove("showtap2", "showtap2bigscreen");
+  tap3.classList.remove("showtap3", "showtap3bigscreen");
+
   bar2.classList.remove("show2", "show3");
 });
-
     //-----------------bar-position--------------------
     const bar2position = document.querySelector('.bar2');
     window.addEventListener('scroll',()=>{
@@ -261,6 +300,7 @@ datah2.textContent = new Date().getFullYear();
 
  
   
+
 
 
 
