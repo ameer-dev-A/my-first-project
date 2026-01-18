@@ -676,7 +676,7 @@ li{
   justify-content: center;
   border-right: 2px solid white;
 }
-.info a{padding: 15px;color: #0000ff;}
+.info a{padding: 15px;color: white;}
 
 
  address{
@@ -708,6 +708,7 @@ iframe{
    border:0; 
 }
 mailto a{font-size: 25px;}
+
 
 
 
