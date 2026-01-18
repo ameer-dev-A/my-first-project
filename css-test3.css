@@ -13,7 +13,10 @@ body{
 }
 
 img.logo2{display: none;}
-
+button{cursor: pointer;border-radius: 50px;}
+@media(max-width:450px){
+  .bg .bg1 {width: 50%;margin: auto;}
+}
 @media(max-width:850px){
   nav#bar{height:10vh;position: fixed;top: 0;left: 0;background-color: white;z-index: 10000;}
   img.logo2{display:block;position: absolute;right: 30px;top: 0;margin: 10px;;width: 60px;height: auto;border-radius: 50px;}
@@ -70,7 +73,7 @@ img.logo2{display: none;}
   p.ptitle{font-size: 15px;}
   /*------------------slide small--------------------*/
   .bg{overflow: hidden;position: relative;height: 600px;}
-  .bg1 {width: 100%;margin: auto;}
+  .bg .bg1 {width: 100%;margin: auto;}
    #bg2 {position: absolute;}
   .slidediv {width: 100%; margin-top: 0px;}
   img.slide {width: 80%;}
@@ -273,7 +276,7 @@ ul.tap3{
     background-color: #ffffff;
     margin-top: 10px;
     display: none;
-    z-index: 50;
+    z-index: 5000;
 }
 ul.showtap2bigscreen{
   position: absolute;
@@ -282,7 +285,7 @@ ul.showtap2bigscreen{
   background-color: #ffffff;
   margin-top: 10px;
   display: block;
-  z-index: 50;
+  z-index: 5000;
 }
 ul.tap3{
   position: absolute;
@@ -291,7 +294,7 @@ ul.tap3{
   background-color: #ffffff;
   margin-top: 10px;
   display: none;
-  z-index: 50;
+  z-index: 5000;
   grid-template-columns: repeat(3,1fr); 
 }
 ul.showtap3bigscreen{
@@ -301,7 +304,7 @@ ul.showtap3bigscreen{
   background-color: #ffffff;
   margin-top: 10px;
   display: grid;
-  z-index: 50;
+  z-index: 5000;
   grid-template-columns: repeat(3,1fr); 
 }
 ul.tap2 li , ul.tap3 li{
@@ -705,6 +708,7 @@ iframe{
    border:0; 
 }
 mailto a{font-size: 25px;}
+
 
 
 
